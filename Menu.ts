@@ -1,10 +1,14 @@
 import readlinesync = require("readline-sync");
+import { colors } from './src/util/Colors';
 
 export function main() {
+    
     let opcao: number;
 
     while (true) {
-        console.log("╔══════════════════════════════════════════════╗");
+        console.log(colors.bg.black, colors.fg.magenta,
+                    "");
+        console.log("╔══════════════════════════════════════════════╗")
         console.log("║             🏦 Banco Nova Era 🏦             ║");
         console.log("╠══════════════════════════════════════════════╣");
         console.log("║                                              ║");    
@@ -18,43 +22,72 @@ export function main() {
         console.log("║ 8 - Transferir valores entre Contas          ║");
         console.log("║ 9 - Sair                                     ║");
         console.log("║                                              ║");
-        console.log("╚══════════════════════════════════════════════╝");
+        console.log("╚══════════════════════════════════════════════╝", colors.reset);
 
         opcao = readlinesync.questionInt("Escolha uma opcao: ");
 
         if (opcao == 9) {
-            console.log("\nBanco Nova Era - O banco do futuro!");
+            console.log(colors.fg.magentastrong,
+                "\nBanco Nova Era - O banco do futuro!");
             sobre();
+            console.log(colors.reset, "");
             process.exit(0);
         }
 
         switch (opcao) {
             case 1:
-                console.log("Criar Conta");
+                console.log(colors.fg.whitestrong,
+                    "Criar Conta", colors.reset);
+
+                keyPress()
                 break;
             case 2:
-                console.log("Listar todas as Contas");
+                console.log(colors.fg.whitestrong,
+                    "Listar todas as Contas", colors.reset);
+
+                keyPress()
                 break;
             case 3:
-                console.log("Buscar Conta por Número");
+                console.log(colors.fg.whitestrong,
+                    "Buscar Conta por Número", colors.reset);
+
+                keyPress()
                 break;
             case 4:
-                console.log("Atualizar Dados da Conta");
+                console.log(colors.fg.whitestrong,
+                    "Atualizar Dados da Conta", colors.reset);
+
+                keyPress()
                 break;
             case 5:
-                console.log("Apagar Conta");
+                console.log(colors.fg.whitestrong,
+                    "Apagar Conta", colors.reset);
+
+                keyPress()
                 break;
             case 6:
-                console.log("Sacar");
+                console.log(colors.fg.whitestrong,
+                    "Sacar", colors.reset);
+
+                keyPress()
                 break;
             case 7:
-                console.log("Depositar");
+                console.log(colors.fg.whitestrong,
+                    "Depositar", colors.reset);
+
+                keyPress()
                 break;
             case 8:
-                console.log("Transferir valores entre Contas");
+                console.log(colors.fg.whitestrong,
+                    "Transferir valores entre Contas", colors.reset);
+
+                keyPress()
                 break;
             default:
-                console.log("Opção inválida! Tente novamente.");
+                console.log(colors.fg.whitestrong,
+                    "Opção inválida! Tente novamente.", colors.reset);
+
+                keyPress()
                 break;
         }
     }
@@ -68,6 +101,12 @@ export function sobre() {
     console.log(" Generation Brasil - mariacdnavarro@gmail.com ");
     console.log(" github.com/marinavarroo                      ");
     console.log("══════════════════════════════════════════════");
+}
+
+function keyPress(): void {
+    console.log(colors.reset, "");
+    console.log("\nPressione enter para continuar...");
+    readlinesync.prompt();
 }
 
 main();
