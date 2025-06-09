@@ -5,7 +5,7 @@ Um projeto simples desenvolvido em TypeScript que simula o funcionamento básico
 
 ## 📋 Descrição
 
-Esse projeto tem como objetivo aplicar conceitos fundamentais de programação orientada a objetos (**POO**) utilizando TypeScript, além de práticas com **readline-sync** para entrada de dados no terminal.
+Esse projeto tem como objetivo aplicar conceitos fundamentais de programação orientada a objetos (**POO**) utilizando TypeScript, além de práticas com **readline-sync** para entrada de dados no terminal e CRUD.
 
 ## ⚙️ Tecnologias Utilizadas
 
